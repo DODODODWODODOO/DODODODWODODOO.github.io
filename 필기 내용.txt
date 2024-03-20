@@ -257,3 +257,56 @@ pom.xml jstl 태그 라이브러리 작성 => jsp에서 자바코드를 태그�
 
 <c:if test="조건"> </c:if>
 <c:if test="${5<10}"> </c:if>
+
+
+
+
+
+~pro ===> Servlet 변경
+
+1. list 
+
+메뉴 todo list 클릭 => Servlet 이동 (db 작업, 작업결과를 scope에 담고 이동)
+=> list.jsp 에서 결과 보여주기
+
+2. read
+
+제목 클릭 => Servlet 이동 (no 가져오기 ,db 작업, 작업결과를 scope에 담고 이동)
+=> read.jsp 결과 보여주기
+
+http://localhost:8080/jdbc 시작
+
+서블릿
+http://localhost:8080/jdbc/서블릿주소
+
+http://localhost:8080/jdbc/list
+
+JSP
+http://localhost:8080/jdbc/view/delete.jsp
+
+/jdbc : context path(프로젝트 명)
+
+<c:url /> : /jdbc 자동으로 붙여줌
+            /view/delete.jsp
+
+http://localhost:8080/jdbc/modify?no=3
+                            여기 부분만
+update : http://localhost:8080/jdbc/update
+
+/update : http://localhost:8080/update
+
+<c:url /> 을 못쓰는 경우
+${pageContext.request.contextPath}/update : /jdbc 자동으로 붙여줌
+
+
+
+
+book
+
+jsp : 결과 보여주기, 입력받기
+servlet : dao 연동
+dao : db 연동
+dto : jsp <==> Servlet <==> DAO 데이터 주고 받기 위한 객체
+
+
+
