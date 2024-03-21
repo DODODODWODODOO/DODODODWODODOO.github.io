@@ -308,5 +308,32 @@ servlet : dao 연동
 dao : db 연동
 dto : jsp <==> Servlet <==> DAO 데이터 주고 받기 위한 객체
 
+커넥션 풀 : 데이터베이스 연동 변경
 
+DBCP(Database Connection Pool)
+(1) 톰캣
+(2) HikariCP
+
+
+*.do
+insert.do
+update.do
+delete.do
+get.do
+list.do
+
+http://localhost:8080/list.do
+
+http://localhost:8080/todo_m2/list.do
+requestUri(8080 이후의 값) : /list.do
+                                     /list.do
+contextPath : /todo_m2
+
+/todo_m2/list.do - /todo_m2 = /list.do
+
+
+
+resp.sendRedirect("/list.do");
+RequestDispatcher rd = req.getRequestDispatcher("/view/modify.jsp");
+rd.forward(req, resp);
 
