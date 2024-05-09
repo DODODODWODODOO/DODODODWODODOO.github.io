@@ -23,6 +23,16 @@ git status - git 현재 상태
 git merge
   1) conflict : 충돌
      같은 파일을 동일한 위치 수정이 들어가면 병합이 되면서 충돌 남
+
+
+git revert : 커밋취소하고 작성자의 선택에 따라서 결정됨
+
+git reset --soft : revert 와 달리 커밋만 취소하고 소스는 건들지 않는다
+	--mixed : 커밋영역을 changes 까지 내려버림
+	--hard : 소스가 날라감
+
+
+
      
 
 
